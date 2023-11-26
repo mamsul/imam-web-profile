@@ -1,0 +1,58 @@
+{
+  "pengalaman": [
+    {
+      "id": 1,
+      "judul": {
+        "kantor": "Agtran Sdn. Bhd.",
+        "posisi": "Front-End Developer",
+        "tipe": "(Part time)"
+      },
+      "techstack": ["Next.js", "Tailwind CSS", "Shadcn UI", "Zustand"],
+      "description": [
+        "Membuat aplikasi web menggunakan framework nextjs 13, dengan template ui dari shadcn ui yang berbasis tailwind css.",
+        "Integrasi data dengan GraphQl."
+      ],
+      "date": "Sept 2023 - Nov 2023"
+    },
+    {
+      "id": 2,
+      "judul": {
+        "kantor": "Fishlog",
+        "posisi": "Front-End Developer",
+        "tipe": "(Full time)"
+      },
+      "techstack": [
+        "React.js",
+        "Next.js",
+        "SCSS",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Redux"
+      ],
+      "description": [
+        "develop aplikasi web menggunakan react.js, react bootstrap, scss, dan redux untuk state management nya.",
+        "Integrasi data dengan rest api.",
+        "Kolaborasi tim dengan metodologi agile."
+      ],
+      "date": "Des 2022 - Nov 2023"
+    },
+    {
+      "id": 3,
+      "judul": {
+        "kantor": "Agtran Sdn. Bhd.",
+        "posisi": "Front-End Developer",
+        "tipe": "(Full time)"
+      },
+      "techstack": ["Vue.js", "Nuxt.js", "Tailwind CSS", "Flutter"],
+      "description": [
+        "Mengerjakan task frontend untuk platform web dan mobile seperti slicing UI, integrasi (API, GraphQl).",
+        "Kolaborasi tim"
+      ],
+      "date": "Des 2021 - Nov 2022"
+    }
+  ],
+  "bahasa": ["HTML", "CSS", "Javascript", "Typescript"],
+  "uiTech": ["Tailwind CSS", "Bootstrap", "Shadcn UI", "CSS"],
+  "techStack": ["React.js", "Next.js", "Vue.js", "Nuxt.js", "Redux", "Zustand"],
+  "tools": ["VS Code", "Node.js", "Git"]
+}

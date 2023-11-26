@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -8,13 +9,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'dark-bg': '#0F172A',
+        'dark-border': '#334155',
+        'dark-label-bg': '#334155',
+        'dark-label': '#CBD5E1',
+        'dark-text-primary': '#E2E8F0',
+        'dark-text-secondary': '#CBD5E1',
+        'light-text-secondary': '#64748B'
       },
-    },
+    }
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const utilities = {
+        ".bg-hero": {
+          "background": "url(/static/header-bg.png) no-repeat",
+          "background-size": "cover",
+          "background-position": "top"
+        }
+      }
+
+      addUtilities(utilities)
+    }),
+  ],
 }
 export default config
