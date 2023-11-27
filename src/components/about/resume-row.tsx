@@ -1,6 +1,6 @@
-import { CalendarCheck, Tag } from "lucide-react";
-import React from "react";
-import ResumeDate from "./resume-date";
+import { Tag } from 'lucide-react';
+import React from 'react';
+import ResumeDate from './resume-date';
 
 interface IResumeRowProps {
   title: string;
@@ -16,19 +16,19 @@ const ResumeRow = ({
   isCustom = false,
 }: IResumeRowProps) => {
   return (
-    <div className="w-full flex flex-col lg:flex-row items-start tracking-wider border-b border-dark-border pb-6">
-      <div className="w-full lg:w-3/12 mb-3 lg:mb-0">
-        <h3 className="text-sm lg:text-base font-bold text-dark-text-primary inline-flex items-center">
-          <Tag className="w-3 h-3 lg:hidden mr-2" /> {title}
+    <div className="flex w-full flex-col items-start border-b border-dark-border pb-6 tracking-wider lg:flex-row">
+      <div className="mb-3 w-full lg:mb-0 lg:w-3/12">
+        <h3 className="inline-flex items-center text-sm font-bold text-dark-text-primary lg:text-base">
+          <Tag className="mr-2 h-3 w-3 lg:hidden" /> {title}
         </h3>
       </div>
 
-      <div className={isCustom ? "w-full lg:w-9/12" : "w-full lg:w-7/12"}>
+      <div className={isCustom ? 'w-full lg:w-9/12' : 'w-full lg:w-7/12'}>
         {children}
       </div>
 
       {!isCustom && (
-        <div className="w-full lg:w-3/12 xl:w-2/12 flex lg:justify-end pl-5 lg:pl-0">
+        <div className="flex w-full pl-5 lg:w-3/12 lg:justify-end lg:pl-0 xl:w-2/12">
           <ResumeDate date={date} />
         </div>
       )}
