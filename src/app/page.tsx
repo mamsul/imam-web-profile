@@ -1,26 +1,17 @@
-import ResumeRow from "@/components/about/resume-row";
-import HeaderSection from "@/components/section/header-section";
-import Badge from "@/components/utility/badge";
-import { CalendarCheck } from "lucide-react";
-import {
-  pengalaman,
-  bahasa,
-  uiTech,
-  techStack,
-  tools,
-} from "@/assets/constants/resume.json";
-import ResumeDate from "@/components/about/resume-date";
+import resumeJson from '@/assets/constants/resume.json';
+import ResumeDate from '@/components/about/resume-date';
+import ResumeRow from '@/components/about/resume-row';
 
 export default function Home() {
   return (
     <div className="mt-5 pb-5">
-      <div className="flex flex-col space-y-10 lg:px-3 mt-6 lg:mt-12">
+      <div className="mt-6 flex flex-col space-y-10 lg:mt-12 lg:px-3">
         <ResumeRow title="Pendidikan" date="2018 - Oct 2021">
           <div className="pl-5 lg:pl-0">
-            <p className="text-xs md:text-sm lg:text-base text-dark-text-primary font-medium">
-              Politeknik Negeri Indramayu -{" "}
+            <p className="text-xs font-medium text-dark-text-primary md:text-sm lg:text-base">
+              Politeknik Negeri Indramayu -{' '}
               <span className="font-normal">
-                Teknik Informatika{" "}
+                Teknik Informatika{' '}
                 <span className="text-dark-text-secondary">(D3)</span>
               </span>
             </p>
@@ -28,43 +19,41 @@ export default function Home() {
         </ResumeRow>
 
         <ResumeRow title="Pengalaman" date="" isCustom>
-          <div className="w-full flex flex-col space-y-8 pl-5 lg:pl-0">
-            {pengalaman.map((item) => {
+          <div className="flex w-full flex-col space-y-8 pl-5 lg:pl-0">
+            {resumeJson?.pengalaman?.map((item) => {
               return (
                 <div key={item.id}>
-                  <div className="w-full flex flex-col lg:flex-row justify-start lg:justify-between items-start lg:items-center">
-                    <p className="text-xs md:text-sm lg:text-base text-dark-text-primary font-bold">
+                  <div className="flex w-full flex-col items-start justify-start lg:flex-row lg:items-center lg:justify-between">
+                    <p className="text-xs font-bold text-dark-text-primary md:text-sm lg:text-base">
                       {item.judul.kantor} -
-                      <span className="font-normal ms-2">
+                      <span className="ms-2 font-normal">
                         {item.judul.posisi}
-                        <span className="text-dark-text-secondary ms-2">
+                        <span className="ms-2 text-dark-text-secondary">
                           {item.judul.tipe}
                         </span>
                       </span>
                     </p>
                     <ResumeDate date={item.date} />
                   </div>
-                  <div className="flex flex-wrap gap-2 my-3">
+                  <div className="my-3 flex flex-wrap gap-2">
                     {item.techstack.map((tech, idx) => {
                       return (
                         <div
                           key={`tech-${item.id}-${idx}`}
-                          className="bg-dark-label-bg px-1 rounded-md pb-0.5"
-                        >
-                          <span className="text-dark-label text-xs lg:text-sm">
+                          className="rounded-md bg-dark-label-bg px-1 pb-0.5">
+                          <span className="text-xs text-dark-label lg:text-sm">
                             {tech}
                           </span>
                         </div>
                       );
                     })}
                   </div>
-                  <ul className="list-disc text-dark-text-primary pl-4">
+                  <ul className="list-disc pl-4 text-dark-text-primary">
                     {item.description.map((desc, idx) => {
                       return (
                         <li
                           key={`desc-${item.id}-${idx}`}
-                          className="font-light text-xs lg:text-sm mt-2"
-                        >
+                          className="mt-2 text-xs font-light lg:text-sm">
                           {desc}
                         </li>
                       );
@@ -77,25 +66,24 @@ export default function Home() {
         </ResumeRow>
 
         <ResumeRow title="Skill & Tools" date="" isCustom>
-          <div className="w-full flex flex-col pl-5 lg:pl-0">
+          <div className="flex w-full flex-col pl-5 lg:pl-0">
             <div>
-              <h4 className="text-sm lg:text-base text-dark-text-primary font-bold">
+              <h4 className="text-sm font-bold text-dark-text-primary lg:text-base">
                 Bahasa
               </h4>
-              <div className="flex flex-row mt-3">
+              <div className="mt-3 flex flex-row">
                 <div className="w-4/12 lg:w-2/12">
-                  <span className="text-light-text-secondary font-light text-xs">
+                  <span className="text-xs font-light text-light-text-secondary">
                     FE Related
                   </span>
                 </div>
-                <div className="w-8/12 lg:w-10/12 flex flex-wrap gap-2 lg:gap-4">
-                  {bahasa.map((lang, idx) => {
+                <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
+                  {resumeJson.bahasa.map((lang, idx) => {
                     return (
                       <div
                         key={`language-${idx}`}
-                        className="bg-dark-label-bg px-2 rounded-md pb-0.5"
-                      >
-                        <span className="text-xs lg:text-sm text-dark-label">
+                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                        <span className="text-xs text-dark-label lg:text-sm">
                           {lang}
                         </span>
                       </div>
@@ -106,23 +94,22 @@ export default function Home() {
             </div>
 
             <div className="mt-5">
-              <h4 className="text-sm lg:text-base text-dark-text-primary font-bold">
+              <h4 className="text-sm font-bold text-dark-text-primary lg:text-base">
                 Teknogi
               </h4>
-              <div className="flex flex-row mt-3">
+              <div className="mt-3 flex flex-row">
                 <div className="w-4/12 lg:w-2/12">
-                  <span className="text-light-text-secondary font-light text-xs">
+                  <span className="text-xs font-light text-light-text-secondary">
                     UI Related
                   </span>
                 </div>
-                <div className="w-8/12 lg:w-10/12 flex flex-wrap gap-2 lg:gap-4">
-                  {uiTech.map((ui, idx) => {
+                <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
+                  {resumeJson.uiTech.map((ui, idx) => {
                     return (
                       <div
                         key={`ui-${idx}`}
-                        className="bg-dark-label-bg px-2 rounded-md pb-0.5"
-                      >
-                        <span className="text-dark-label text-xs lg:text-sm">
+                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                        <span className="text-xs text-dark-label lg:text-sm">
                           {ui}
                         </span>
                       </div>
@@ -130,20 +117,19 @@ export default function Home() {
                   })}
                 </div>
               </div>
-              <div className="flex flex-row mt-3">
+              <div className="mt-3 flex flex-row">
                 <div className="w-4/12 lg:w-2/12">
-                  <span className="text-light-text-secondary font-light text-xs">
+                  <span className="text-xs font-light text-light-text-secondary">
                     FE Related
                   </span>
                 </div>
-                <div className="w-8/12 lg:w-10/12 flex flex-wrap gap-2 lg:gap-4">
-                  {techStack.map((techS, idx) => {
+                <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
+                  {resumeJson.techStack.map((techS, idx) => {
                     return (
                       <div
                         key={`techS-${idx}`}
-                        className="bg-dark-label-bg px-2 rounded-md pb-0.5"
-                      >
-                        <span className="text-dark-label text-xs lg:text-sm">
+                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                        <span className="text-xs text-dark-label lg:text-sm">
                           {techS}
                         </span>
                       </div>
@@ -154,23 +140,22 @@ export default function Home() {
             </div>
 
             <div className="mt-5">
-              <h4 className="text-sm lg:text-base text-dark-text-primary font-bold">
+              <h4 className="text-sm font-bold text-dark-text-primary lg:text-base">
                 Tools & Software
               </h4>
-              <div className="flex flex-row mt-3">
+              <div className="mt-3 flex flex-row">
                 <div className="w-4/12 lg:w-2/12">
-                  <span className="text-light-text-secondary font-light text-xs">
+                  <span className="text-xs font-light text-light-text-secondary">
                     Coder Related
                   </span>
                 </div>
-                <div className="w-8/12 lg:w-10/12 flex flex-wrap gap-4">
-                  {tools.map((tool, idx) => {
+                <div className="flex w-8/12 flex-wrap gap-4 lg:w-10/12">
+                  {resumeJson.tools.map((tool, idx) => {
                     return (
                       <div
                         key={`tool-${idx}`}
-                        className="bg-dark-label-bg px-2 rounded-md pb-0.5"
-                      >
-                        <span className="text-dark-label text-xs lg:text-sm">
+                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                        <span className="text-xs text-dark-label lg:text-sm">
                           {tool}
                         </span>
                       </div>

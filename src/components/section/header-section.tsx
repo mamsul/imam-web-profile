@@ -1,20 +1,18 @@
-import { Github, Instagram, Linkedin, MailIcon, MapPin } from "lucide-react";
-import Badge from "../utility/badge";
-import ProfileImage from "../header/profile-image";
-import HeaderTitle from "../header/header-title";
-import SocialData from "../header/social-data";
-import Description from "../header/description";
+import Description from '../header/description';
+import HeaderTitle from '../header/header-title';
+import ProfileImage from '../header/profile-image';
+import SocialData from '../header/social-data';
 
 export default function HeaderSection() {
   return (
-    <div className="bg-hero w-full h-max lg:h-80 xl:h-[450px] flex items-center">
-      <div className="screen-size py-10 h-full flex flex-col lg:flex-row items-center border-b border-dark-border">
-        <div className="flex flex-col w-full lg:w-5/12">
-          <div className="flex flex-row items-center w-full">
+    <div className="flex h-max w-full items-center bg-hero lg:h-80 xl:h-[450px]">
+      <div className="screen-size flex h-full flex-col items-center border-b border-dark-border py-10 lg:flex-row">
+        <div className="flex w-full flex-col lg:w-5/12">
+          <div className="flex w-full flex-row items-center">
             <div className="w-2/12 lg:w-3/12">
               <ProfileImage />
             </div>
-            <div className="w-10/12 lg:w-9/12 ps-5 md:ps-3 lg:ps-0 xl:ps-0 flex flex-col">
+            <div className="flex w-10/12 flex-col ps-5 md:ps-3 lg:w-9/12 lg:ps-0 xl:ps-0">
               <HeaderTitle />
             </div>
           </div>
@@ -22,11 +20,11 @@ export default function HeaderSection() {
           <SocialData />
         </div>
 
-        <div className="w-1/12 h-full hidden xl:block">
-          <div className="w-1 bg-dark-label h-full rotate-12 m-auto"></div>
+        <div className="hidden h-full w-1/12 xl:block">
+          <div className="m-auto h-full w-1 rotate-12 bg-dark-label"></div>
         </div>
 
-        <div className="w-full lg:w-6/12 flex lg:justify-end mt-4 md:mt-6 lg:mt-0 ms-auto">
+        <div className="ms-auto mt-4 flex w-full md:mt-6 lg:mt-0 lg:w-6/12 lg:justify-end">
           <Description />
         </div>
       </div>
