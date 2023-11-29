@@ -1,6 +1,7 @@
-import resumeJson from '@/assets/constants/resume.json';
 import ResumeDate from '@/components/about/resume-date';
 import ResumeRow from '@/components/about/resume-row';
+import Badge from '@/components/utility/badge';
+import resumeJson from '@/lib/resume.json';
 
 export default function Home() {
   return (
@@ -38,13 +39,11 @@ export default function Home() {
                   <div className="my-3 flex flex-wrap gap-2">
                     {item.techstack.map((tech, idx) => {
                       return (
-                        <div
-                          key={`tech-${item.id}-${idx}`}
-                          className="rounded-md bg-dark-label-bg px-1 pb-0.5">
+                        <Badge key={`tech-${item.id}-${idx}`}>
                           <span className="text-xs text-dark-label lg:text-sm">
                             {tech}
                           </span>
-                        </div>
+                        </Badge>
                       );
                     })}
                   </div>
@@ -80,13 +79,11 @@ export default function Home() {
                 <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
                   {resumeJson.bahasa.map((lang, idx) => {
                     return (
-                      <div
-                        key={`language-${idx}`}
-                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                      <Badge key={`language-${idx}`}>
                         <span className="text-xs text-dark-label lg:text-sm">
                           {lang}
                         </span>
-                      </div>
+                      </Badge>
                     );
                   })}
                 </div>
@@ -106,13 +103,11 @@ export default function Home() {
                 <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
                   {resumeJson.uiTech.map((ui, idx) => {
                     return (
-                      <div
-                        key={`ui-${idx}`}
-                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                      <Badge key={`ui-${idx}`}>
                         <span className="text-xs text-dark-label lg:text-sm">
                           {ui}
                         </span>
-                      </div>
+                      </Badge>
                     );
                   })}
                 </div>
@@ -126,13 +121,11 @@ export default function Home() {
                 <div className="flex w-8/12 flex-wrap gap-2 lg:w-10/12 lg:gap-4">
                   {resumeJson.techStack.map((techS, idx) => {
                     return (
-                      <div
-                        key={`techS-${idx}`}
-                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                      <Badge key={`techS-${idx}`}>
                         <span className="text-xs text-dark-label lg:text-sm">
                           {techS}
                         </span>
-                      </div>
+                      </Badge>
                     );
                   })}
                 </div>
@@ -152,13 +145,11 @@ export default function Home() {
                 <div className="flex w-8/12 flex-wrap gap-4 lg:w-10/12">
                   {resumeJson.tools.map((tool, idx) => {
                     return (
-                      <div
-                        key={`tool-${idx}`}
-                        className="rounded-md bg-dark-label-bg px-2 pb-0.5">
+                      <Badge key={`tool-${idx}`}>
                         <span className="text-xs text-dark-label lg:text-sm">
                           {tool}
                         </span>
-                      </div>
+                      </Badge>
                     );
                   })}
                 </div>
