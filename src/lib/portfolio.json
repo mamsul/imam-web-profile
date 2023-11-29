@@ -1,0 +1,45 @@
+{
+  "portfolio": [
+    {
+      "id": 1,
+      "type": "company",
+      "name": "Fishlog WMS Web",
+      "techStack": ["React.js", "SCSS", "Bootstrap", "Redux"],
+      "desc": "Mengembangkan dan membuat beberapa fitur tambahan dalam sebuah aplikasi web untuk manajemen gudang seperti inbound, outbound, dll.",
+      "images": [],
+      "link": null
+    },
+    {
+      "id": 2,
+      "type": "company",
+      "name": "Agtran Fleetsync Admin",
+      "techStack": [
+        "Next.js (Typescript)",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Zustand"
+      ],
+      "desc": "Membangun sisi front-end dari aplikasi Agtran Fleetsync Admin yang merupakan aplikasi untuk agtran admin dalam mengatur reservasi dan master data.",
+      "images": [],
+      "link": null
+    },
+    {
+      "id": 3,
+      "type": "company",
+      "name": "Agtran Web",
+      "techStack": ["Nuxt.js", "Tailwind CSS", "Vuex"],
+      "desc": "Sebuah website persewaan mobil dari Agtran Sdn. Bhd., pada project ini saya melakukan revamp terhadap UI dan juga flow reservasi.",
+      "images": [],
+      "link": "https://agtran.com/"
+    },
+    {
+      "id": 4,
+      "type": "personal",
+      "name": "This website",
+      "techStack": ["Next.js", "Tailwind CSS"],
+      "desc": "Sebuah website profile pribadi saya, digunakan untuk menampilkan informasi mengenai diri saya, dsb. saat ini masih static namun kedepannya akan dibuat semacam CMS agar lebih mudah dalam mengatur konten nya.",
+      "images": [],
+      "link": "https://imam-sulthoni.vercel.app/"
+    }
+  ]
+}
