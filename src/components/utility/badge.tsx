@@ -1,16 +1,19 @@
-import React, { ReactNode } from "react";
+import { cn } from '@/lib/utils';
+import { ReactNode } from 'react';
 
 interface BadgeProps {
   className?: string;
   children: ReactNode;
+  variant?: 'default' | 'social';
 }
 
-const Badge = ({ className, children }: BadgeProps) => {
-  return (
-    <div className={`rounded-3xl border py-1 px-1.5 md:px-3 lg:px-5 ${className}`}>
-      {children}
-    </div>
-  );
+const Badge = ({ className, children, variant = 'default' }: BadgeProps) => {
+  const badgeStyle = {
+    social: 'rounded-3xl border px-1.5 py-1 md:px-3 lg:px-5',
+    default: 'rounded-md bg-dark-label-bg px-2 pb-0.5',
+  };
+
+  return <div className={cn(badgeStyle[variant], className)}>{children}</div>;
 };
 
 export default Badge;
