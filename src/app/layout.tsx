@@ -1,5 +1,6 @@
 import HeaderSection from '@/components/section/header-section';
 import NavbarSection from '@/components/section/navbar-section';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import '../assets/styles/globals.css';
@@ -24,6 +25,8 @@ export default function RootLayout({
           <NavbarSection />
           <main className="screen-size mt-4">{children}</main>
         </div>
+
+        <Analytics />
       </body>
     </html>
   );
