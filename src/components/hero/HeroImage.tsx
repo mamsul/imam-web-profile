@@ -10,6 +10,12 @@ const HeroImage = ({ className }: { className: string }) => {
       <m.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          delay: 0.5,
+          duration: 0.5,
+          type: 'spring',
+          stiffness: 200,
+        }}
         className="relative h-[8rem] w-[8rem] overflow-hidden rounded-full bg-white p-5 sm:h-[10rem] sm:w-[10rem]">
         <Image
           src="/static/imam-openpeeps.png"

@@ -1,5 +1,4 @@
 import About from '@/components/section/About';
-import Contact from '@/components/section/Contact';
 import Experience from '@/components/section/Experience';
 import Hero from '@/components/section/Hero';
 import Playground from '@/components/section/Playground';
@@ -14,12 +13,11 @@ export default function Home() {
       <Experience />
       <Skills />
       <Playground />
-      <Contact />
       <footer className="mt-20 w-full sm:mt-28">
         <div className="flex w-full flex-col items-center justify-center border-t border-gray-300 py-5">
           <a
             href="mailto:imamsulthoni.amd@gmailcom"
-            className="text-sm sm:text-base md:text-lg">
+            className="text-sm underline-offset-4 hover:underline sm:text-base md:text-lg">
             imamsulthoni.amd@gmail.com
           </a>
           <div className="mt-3 flex gap-4 sm:mt-5">

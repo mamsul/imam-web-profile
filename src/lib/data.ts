@@ -3,8 +3,7 @@ export const links = [
   { name: 'About', path: '#about' },
   { name: 'Experience', path: '#experience' },
   { name: 'Skills', path: '#skills' },
-  { name: 'Playground', path: '#playground' },
-  { name: 'Contact', path: '#contact' },
+  { name: 'Portfolio', path: '#portfolio' },
 ] as const;
 
 export const skills = [

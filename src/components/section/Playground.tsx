@@ -8,16 +8,16 @@ import SectionHeading from '../SectionHeading';
 
 const Playground = () => {
   const { ref } = useActiveSectionHook({
-    activeNav: 'Playground',
+    activeNav: 'Portfolio',
     threshold: 0.9,
   });
 
   return (
     <div
       ref={ref}
-      id="playground"
+      id="portfolio"
       className="relative mt-20 flex scroll-mt-20 flex-col items-center sm:mt-28 sm:scroll-mt-28">
-      <SectionHeading>Playground</SectionHeading>
+      <SectionHeading>Portfolio</SectionHeading>
       <div className="flex items-center gap-5 sm:gap-10">
         <div className="flex w-1/2 justify-center sm:justify-end">
           <m.div
@@ -44,7 +44,7 @@ const Playground = () => {
         <div className="flex w-1/2 flex-col">
           <span className="text-lg font-medium sm:text-xl">Sorry guys,</span>
           <span className="text-sm sm:text-base">
-            I am still develop the playground section ☕️
+            I am still develop the Portfolio section ☕️
           </span>
         </div>
       </div>
