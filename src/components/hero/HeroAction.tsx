@@ -2,10 +2,9 @@
 
 import { cn } from '@/lib/utils';
 import { motion as m } from 'framer-motion';
-import { Download, Github, Linkedin, PhoneForwarded } from 'lucide-react';
+import { Download, Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useActiveNavContext } from '../../../context/activeNavContext';
 import { Button } from '../Button';
 
 const defaultBtnStyle =
@@ -13,7 +12,6 @@ const defaultBtnStyle =
 
 const HeroAction = () => {
   const router = useRouter();
-  const { setActiveNav, setLastClickTime } = useActiveNavContext();
 
   return (
     <m.div
@@ -21,19 +19,6 @@ const HeroAction = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2 }}>
       <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
-        <Button
-          variant="highlight"
-          className={cn(
-            'inline-flex items-center text-sm sm:text-base',
-            defaultBtnStyle,
-          )}
-          onClick={() => {
-            router.push('#contact');
-            setActiveNav('Contact');
-            setLastClickTime(Date.now());
-          }}>
-          Contact Me <PhoneForwarded className="ms-4 h-4 w-4" />
-        </Button>
         <Button
           variant="default"
           className={cn(
