@@ -13,7 +13,7 @@ const Experience = () => {
       ref={ref}
       id="experience"
       className="relative mt-20 flex scroll-mt-20 flex-col items-center gap-4 sm:mt-28 sm:scroll-mt-28">
-      <SectionHeading>My Career Path and Experiences</SectionHeading>
+      <SectionHeading>Experience</SectionHeading>
       <ExperienceList />
       <div
         className={cn(

@@ -1,4 +1,3 @@
-import About from '@/components/section/About';
 import Experience from '@/components/section/Experience';
 import Hero from '@/components/section/Hero';
 import Playground from '@/components/section/Playground';
@@ -9,9 +8,8 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <Hero />
-      <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Playground />
       <footer className="mt-20 w-full sm:mt-28">
         <div className="flex w-full flex-col items-center justify-center border-t border-gray-300 py-5">

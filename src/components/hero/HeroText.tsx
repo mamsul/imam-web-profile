@@ -12,8 +12,11 @@ const HeroText = ({ className }: { className: string }) => {
         Hi, I&apos;m Imam. a <strong>Front-End Developer</strong> with{' '}
         <strong>2 years </strong>
         of experience. I&apos;m used to implementing figma designs into code
-        from scratch, and currently focusing on <strong>React</strong> and{' '}
-        <strong>Next.js</strong>
+        from scratch. My current stack is focusing on <strong>
+          React.js
+        </strong>{' '}
+        and <strong>Next.js</strong>, with <strong>Typescript</strong> and often
+        to use <strong>Tailwind CSS</strong>.
       </p>
     </m.div>
   );
