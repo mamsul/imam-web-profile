@@ -1,24 +1,28 @@
 'use client';
 
-import { skills } from '@/lib/data';
+import {
+  BootstrapLogo,
+  CssLogo,
+  HtmlLogo,
+  JavascriptLogo,
+  NextjsLogo,
+  ReactjsLogo,
+  SassLogo,
+  TailwindLogo,
+  TypescriptLogo,
+  VuejsLogo,
+} from '@/assets/images';
 import { useActiveSectionHook } from '@/lib/hooks';
+import Image from 'next/image';
 import SectionHeading from '../SectionHeading';
 
-import { motion as m } from 'framer-motion';
-
-const variants = {
-  initial: {
-    opacity: 0,
-    y: 70,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.02 * index,
-    },
-  }),
-};
+const TechStackWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
+  <div className="flex h-auto w-full items-center justify-center gap-4">
+    {children}
+  </div>
+);
 
 const Skills = () => {
   const { ref } = useActiveSectionHook({ activeNav: 'Skills', threshold: 0.3 });
@@ -28,25 +32,52 @@ const Skills = () => {
       ref={ref}
       id="skills"
       className="mt-20 flex scroll-mt-20 flex-col items-center gap-4 sm:mt-28 sm:scroll-mt-28 md:px-14">
-      <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex list-none flex-wrap justify-center gap-3 sm:gap-5">
-        {skills.map((skill, idx) => {
-          return (
-            <m.li
-              key={`skill-${idx}`}
-              className="rounded-lg bg-white px-3 py-1.5 text-sm text-gray-500 shadow transition-all duration-200 hover:-translate-y-2 hover:scale-110 sm:text-base"
-              variants={variants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={idx}>
-              {skill}
-            </m.li>
-          );
-        })}
-      </ul>
+      <SectionHeading>Tech Stack</SectionHeading>
+
+      <div className="grid grid-cols-1 items-center justify-center gap-10 sm:grid-cols-2 md:grid-cols-3 md:gap-14">
+        <TechStackWrapper>
+          <Image src={HtmlLogo} alt="html" className="h-12 w-auto md:h-16" />
+          <Image src={CssLogo} alt="css" className="h-12 w-auto md:h-16" />
+          <Image src={SassLogo} alt="sass" className="h-10 w-auto md:h-14" />
+        </TechStackWrapper>
+        <TechStackWrapper>
+          <Image
+            src={TailwindLogo}
+            alt="tailwind css"
+            className="h-12 w-auto md:h-16"
+          />
+          <Image
+            src={BootstrapLogo}
+            alt="bootstrap"
+            className="h-12 w-auto md:h-16"
+          />
+        </TechStackWrapper>
+        <TechStackWrapper>
+          <Image
+            src={JavascriptLogo}
+            alt="javascript"
+            className="h-12 w-auto md:h-16"
+          />
+          <Image
+            src={TypescriptLogo}
+            alt="typescript"
+            className="h-12 w-auto md:h-16"
+          />
+        </TechStackWrapper>
+        <TechStackWrapper>
+          <Image
+            src={ReactjsLogo}
+            alt="react.js"
+            className="h-12 w-auto md:h-16"
+          />
+          <Image
+            src={NextjsLogo}
+            alt="next.js"
+            className="h-12 w-auto md:h-16"
+          />
+          <Image src={VuejsLogo} alt="vue.js" className="h-12 w-auto md:h-16" />
+        </TechStackWrapper>
+      </div>
     </section>
   );
 };

@@ -25,7 +25,7 @@ const HeroAction = () => {
             'inline-flex items-center text-sm sm:text-base',
             defaultBtnStyle,
           )}
-          onClick={() => router.push('/my_resume.pdf')}>
+          onClick={() => router.push('/resume.pdf')}>
           My Resume <Download className="ms-4 h-4 w-4" />
         </Button>
         <Link href="https://www.linkedin.com/in/imam-sulthoni/" target="_blank">
