@@ -5,7 +5,10 @@ import {
   CssLogo,
   HtmlLogo,
   JavascriptLogo,
+  MysqlLogo,
   NextjsLogo,
+  NodejsLogo,
+  PrismaLogo,
   ReactjsLogo,
   SassLogo,
   TailwindLogo,
@@ -61,6 +64,19 @@ const Skills = () => {
           <Image
             src={TypescriptLogo}
             alt="typescript"
+            className="h-12 w-auto md:h-16"
+          />
+        </TechStackWrapper>
+        <TechStackWrapper>
+          <Image
+            src={NodejsLogo}
+            alt="node js"
+            className="h-12 w-auto md:h-16"
+          />
+          <Image src={MysqlLogo} alt="mysql" className="h-12 w-auto md:h-16" />
+          <Image
+            src={PrismaLogo}
+            alt="prisma"
             className="h-12 w-auto md:h-16"
           />
         </TechStackWrapper>
